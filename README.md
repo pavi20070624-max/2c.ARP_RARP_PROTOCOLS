@@ -71,9 +71,9 @@ s.listen(5)
 c,addr=s.accept()
 address={"6A:08:AA:C2":"165.165.80.80","10:94:BB:EB:44:34":" 169.254.201.22"};
 while True:
-    ip=c.recv(1024).decode()
+    mac=c.recv(1024).decode()
     try:
-       c.send(address[ip].encode())
+       c.send(address[mac].encode())
     except KeyError:
        c.send("Not Found".encode())
 ```
@@ -84,13 +84,13 @@ s=socket.socket()
 s.connect(('localhost',8000))
 while True:
     ip=input("Enter physical Address : ")
-    s.send(ip.encode())
-    print("MAC Address",s.recv(1024).decode())
+    s.send(mac.encode())
+    print("IP Address",s.recv(1024).decode())
 
 ```
 ## OUPUT -RARP:
 
-<img width="799" height="438" alt="image" src="https://github.com/user-attachments/assets/39f3f5ff-b0f3-4293-9b09-5cd7a5e8832c" />
+<img width="805" height="383" alt="image" src="https://github.com/user-attachments/assets/f2bf6524-cc08-4f40-9465-19bc17548fcc" />
 
 ## RESULT
 Thus, the python program for simulating ARP protocols using TCP was successfully 
