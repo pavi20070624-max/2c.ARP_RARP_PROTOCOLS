@@ -2,6 +2,7 @@
 ## AIM
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
+# ARP:
 ## Client:
 1. Start the program
 2. Using socket connection is established between client and server.
@@ -15,7 +16,20 @@ To write a python program for simulating ARP protocols using TCP.
 stored.
 4. Read the IP address which is send by the client.
 5. Map the IP address with its MAC address and return the MAC address to client.
-P
+# RARP:
+## Client:
+1. Start the program
+2. Using socket connection is established between client and server.
+3. Get the MAC address to be converted into IP address.
+4. Send this IP address to server.
+5. Server returns the IP address to client.
+## Server:
+1. Start the program
+2. Accept the socket which is created by the client.
+3. Server maintains the table in which MAC and corresponding IP addresses are
+stored.
+4. Read the MAC address which is send by the client.
+5. Map the MAC address with its IP address and return the IP address to client.
 ## PROGRAM - ARP:
 # Server Side:
 ```
